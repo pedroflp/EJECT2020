@@ -7,4 +7,4 @@ Repositório dedicado ao processo seletivo de 2019.2 da EJECT-UFRN
 |HTML|CSS|JAVASCRIPT|
 |----|---|----------|
 
-Para visualizar o site [Clique aqui!](pedroflp.github.io/EJECT2019/)
+Para visualizar o site [Clique aqui!](pedroflp.github.io/EJECT2020/)
