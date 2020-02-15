@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=590">
+    <title>Pedro Felipe | EJECT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/home/p_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"  rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <section id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo"><img src="images/home/pedro_logodark.png"></div>
+
+                <ul>
+                    <li><a class="active" href="#home">Início</a></li>
+                    <li><a href="#habilities">Habilidades</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    
+                    <li class="eject-link" style="border-left: 1px solid #27306c; padding-left: 30px;">
+                        <a style="margin-right: 0px!important;"  href="https://pedroflp.github.io/EJECT" title="ProSempre - Eject 2019.2" target="_blank"><i class="fas fa-eject"></i> Eject 2019.2</a>
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+    <!-- Home -->
+    <div class="sobreMimMsg" id="sobreMimMsg">
+        <h1>Um breve Resumo!</h1>
+        <h3>Meu nome é Pedro Felipe, tenho 19 anos, sou de Mossoró - RN, mas atualmente estou fazendo faculdade em Natal, capital do estado. Estou cursando Ciência e Tecnologia com objetivo de fazer Engenharia da Computação. <p style="margin-top: 10px">Gosto bastante de computadores e tecnologia. Não paro nenhum minuto de ouvir uma boa música, gosto de alguns gêneros em específico, mas escuto diferentes categorias.  Sou apaixonado por programação. Comecei a programar com 16 anos fazendo um curso online, no decorrer dos anos fui aprendendo algumas tecnologias para desenvolvimento mobile e web.</p></h3>
+        <img src="images/home/personal_image.png">
+        <div style="display: inline-flex; float: right; clear: both;">
+            <li style="border-right: 1px solid #6c63ff; margin-right: 20px;list-style: none;">
+                <a target="_blank" href="https://open.spotify.com/artist/24Hb4GKFYquK73R8mTyInu" style="float: right; clear: right; font-size: 35px; color: #7ff9ae; margin-right: 20px; text-decoration: none; transition: 0.4s;"><i class="fab fa-spotify" title="Playlist favorita"></i></a>
+            </li>
+            <button class="resetBtn" onclick="resetHome()"> Voltar para a visualização padrão!</button>
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="home-message" id="home-message">
+                <h1>Saudações 🚀</h1>
+                <h2>Viajante! </h2>
+                <div class="bottomLineText"></div>
+                <h3>Olá! Me chamo Pedro Felipe, estou atualmente cursando Bacharelado em Ciência e Tecnologia na Universidade Federal do Rio Grande do Norte.</h3>
+                <button title="Saiba mais!" id="saibamaisBtn" class="saibamaisBtn" onclick="saibaMais()">Saiba mais! <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></button>
+            <i class="fas fa-redo-alt" title="Clique para recarregar a página" onclick="reloadPage()" style="display: none; margin-left: 10px; font-size: 20px; color: #7ff9ae; cursor: pointer;" id="reloadIcon"></i>
+            <script>
+            function saibaMais(){
+                // Home Message
+                var background = document.getElementById("home-message");
+                background.classList.add("animation");
+                // Background
+                document.getElementById("home").style.opacity = "1";
+                document.getElementById("home").style.marginLeft = "50%";
+                // Sobre mim
+                var sobremim = document.getElementById("sobreMimMsg");
+                sobremim.classList.add("animationText");
+                sobremim.style.display = "block";
+            }
+
+            function resetHome(){
+                // Home Message
+                var background = document.getElementById("home-message");
+                background.classList.remove("animation");
+                background.classList.add("resetAnimation");
+                // Background
+                document.getElementById("home").style.marginLeft = "0%";
+                // Sobre mim
+                var sobremim = document.getElementById("sobreMimMsg");
+                sobremim.classList.remove("animationText");
+                sobremim.style.display = 'none';
+                // Home Messages Button
+                var saibamaisBtn = document.getElementById("saibamaisBtn");
+                document.getElementById("saibamaisBtn").disabled = true;
+                saibamaisBtn.classList.add("disabledBtn");
+                saibamaisBtn.classList.remove("saibamaisBtn");
+                saibamaisBtn.title = "Não é possível executar esta operação. Recarregue a página!"
+                // Reload Icon
+                document.getElementById("reloadIcon").style.display = "inline-flex";
+            }
+            // Reload Icon
+            function reloadPage(){
+                location.reload();
+            }
+            </script>
+
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilities">
+        <div class="habilities-container">
+            <div class="habilities-message">
+                <img src="images/habilidades/boycode.svg" class="leftImg" data-aos="fade-right">
+                <h1 data-aos="fade-left">Um pouco sobre minhas habilidades!</h1>
+                <div class="bottomLineText2" data-aos="fade-left"></div>
+                <h3 data-aos="fade-left">Tendo conhecimento e apreço por design gráfico e programação, decidi conhecer algo que pudesse juntar os dois. E então, assim, surgiu a vontade de desenvolver projetos web.
+                <p style="margin-top: 20px;" data-aos="fade-left">Para projetos de design utilizei plataformas como Photoshop, Illustrator, entre outros. Enquanto programo, utilizo linguagens como HTML, CSS e JavaScript. E para mesclar os dois ambientes (design e desenvolvimento), uso o Adobe XD, um excelente software para projetar o UI/UX.</p>    
+                </h3>
+            </div>
+
+            <img src="images/habilidades/guy_code.svg" class="rightImg" data-aos="fade-left">
+            <div class="habilities-skill">
+                <h1 data-aos="fade-right">Minhas habilidades:</h1>
+                <h3 data-aos="fade-right">Abaixo estão softwares e linguagens de programação que domino! <i class="far fa-question-circle" style="color: black; margin-left: 10px; cursor: help;" title="Caso a visualização abaixo esteja travada, clique em outro local da tela!"></i></h3>
+                <div class="slider-container" data-aos="fade-right">
+                     <div class="customer-logos slider">
+                        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Photoshop_CC_icon.png/615px-Photoshop_CC_icon.png" title="Photoshop"></div>
+                        <div class="slide"><img src="https://seeklogo.com/images/A/adobe-illustrator-cc-logo-C1DC5A6D09-seeklogo.com.png" title="Illustrator"></div>
+                        <div class="slide"><img src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg" title="Adobe XD"></div>
+                        <div class="slide"><img src="https://logodownload.org/wp-content/uploads/2017/04/adobe-after-effects-logo.png" title="After Effects"></div>
+                        <div class="slide"><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" title="HTML"></div>
+                        <div class="slide"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" title="CSS"></div> 
+                        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" title="JavaScript"></div>
+                        <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" title="Python"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">     
+        <div class="contact-container">
+            <div class="browser" data-aos="fade-up" data-aos-duration="1500">
+                <div class="top-bar">
+                    <div class="dot red" style="background: rgb(255, 52, 52);"></div>
+                    <div class="dot yellow" style="background: rgb(255, 174, 0);"></div>
+                    <div class="dot green" style="background: rgb(63, 194, 63);"></div>
+                </div>
+                <div class="tabs">
+                  <div class="left-tab">
+                        <li class="item" style="width: 90%;">
+                            <svg class="svg-icon" viewBox="0 0 20 20" style="float: right;">
+                                <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
+                            </svg>
+                        </li>
+                        <li class="item profile">
+                            <svg class="svg-icon profile-icon" viewBox="0 0 20 20">
+                                <path fill="none" d="M12.443,9.672c0.203-0.496,0.329-1.052,0.329-1.652c0-1.969-1.241-3.565-2.772-3.565S7.228,6.051,7.228,8.02c0,0.599,0.126,1.156,0.33,1.652c-1.379,0.555-2.31,1.553-2.31,2.704c0,1.75,2.128,3.169,4.753,3.169c2.624,0,4.753-1.419,4.753-3.169C14.753,11.225,13.821,10.227,12.443,9.672z M10,5.247c1.094,0,1.98,1.242,1.98,2.773c0,1.531-0.887,2.772-1.98,2.772S8.02,9.551,8.02,8.02C8.02,6.489,8.906,5.247,10,5.247z M10,14.753c-2.187,0-3.96-1.063-3.96-2.377c0-0.854,0.757-1.596,1.885-2.015c0.508,0.745,1.245,1.224,2.076,1.224s1.567-0.479,2.076-1.224c1.127,0.418,1.885,1.162,1.885,2.015C13.961,13.689,12.188,14.753,10,14.753z M10,0.891c-5.031,0-9.109,4.079-9.109,9.109c0,5.031,4.079,9.109,9.109,9.109c5.031,0,9.109-4.078,9.109-9.109C19.109,4.969,15.031,0.891,10,0.891z M10,18.317c-4.593,0-8.317-3.725-8.317-8.317c0-4.593,3.724-8.317,8.317-8.317c4.593,0,8.317,3.724,8.317,8.317C18.317,14.593,14.593,18.317,10,18.317z"></path>
+                            </svg>
+                        </li>
+                        <div class="email-functions" style="margin-bottom: 20%;">
+                            <li class="item">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path fill="none" d="M16.999,4.975L16.999,4.975C16.999,4.975,16.999,4.975,16.999,4.975c-0.419-0.4-0.979-0.654-1.604-0.654H4.606c-0.584,0-1.104,0.236-1.514,0.593C3.076,4.928,3.05,4.925,3.037,4.943C3.034,4.945,3.035,4.95,3.032,4.953C2.574,5.379,2.276,5.975,2.276,6.649v6.702c0,1.285,1.045,2.329,2.33,2.329h10.79c1.285,0,2.328-1.044,2.328-2.329V6.649C17.724,5.989,17.441,5.399,16.999,4.975z M15.396,5.356c0.098,0,0.183,0.035,0.273,0.055l-5.668,4.735L4.382,5.401c0.075-0.014,0.145-0.045,0.224-0.045H15.396z M16.688,13.351c0,0.712-0.581,1.294-1.293,1.294H4.606c-0.714,0-1.294-0.582-1.294-1.294V6.649c0-0.235,0.081-0.445,0.192-0.636l6.162,5.205c0.096,0.081,0.215,0.122,0.334,0.122c0.118,0,0.235-0.041,0.333-0.12l6.189-5.171c0.099,0.181,0.168,0.38,0.168,0.6V13.351z"></path>
+                                </svg>
+                                <span>Escrever email</span>
+                            </li>
+                            <li class="item">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path fill="none" d="M17.534,10.458l-3.587-6.917c-0.088-0.168-0.262-0.275-0.452-0.275H6.571c-0.189,0-0.363,0.107-0.452,0.275L2.775,9.989c-0.081,0.134-0.159,0.261-0.211,0.409l-0.031,0.06c-0.027,0.05-0.006,0.104-0.014,0.157c-0.044,0.178-0.109,0.348-0.109,0.537v3.293c0,1.262,1.028,2.289,2.29,2.289h10.603c1.262,0,2.288-1.027,2.288-2.289v-3.293c0-0.097-0.043-0.178-0.055-0.271C17.594,10.747,17.607,10.597,17.534,10.458z M6.88,4.284h6.306l2.405,4.639c-0.1-0.013-0.188-0.059-0.289-0.059h-2.354c-0.27,0-0.491,0.208-0.508,0.477c-0.082,1.292-1.154,2.305-2.441,2.305c-1.287,0-2.359-1.013-2.44-2.305C7.542,9.073,7.32,8.865,7.052,8.865H4.7c-0.077,0-0.142,0.037-0.217,0.043L6.88,4.284zM16.573,14.445c0,0.7-0.57,1.271-1.271,1.271H4.7c-0.701,0-1.271-0.571-1.271-1.271v-3.293c0-0.122,0.038-0.231,0.07-0.343l0.235-0.455C3.966,10.073,4.306,9.882,4.7,9.882h1.907c0.324,1.595,1.732,2.782,3.394,2.782c1.66,0,3.07-1.188,3.394-2.782h1.909c0.7,0,1.271,0.57,1.271,1.271V14.445z"></path>
+                                </svg>
+                                  <span>Inbox</span>
+                                </li>
+                            <li class="item">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M14.467,1.771H5.533c-0.258,0-0.47,0.211-0.47,0.47v15.516c0,0.414,0.504,0.634,0.802,0.331L10,13.955l4.136,4.133c0.241,0.241,0.802,0.169,0.802-0.331V2.241C14.938,1.982,14.726,1.771,14.467,1.771 M13.997,16.621l-3.665-3.662c-0.186-0.186-0.479-0.186-0.664,0l-3.666,3.662V2.711h7.994V16.621z"></path>
+                                </svg>
+                                <span>Rascunho</span>
+                            </li>
+                          </div>
+        
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path fill="none" d="M16.85,7.275l-3.967-0.577l-1.773-3.593c-0.208-0.423-0.639-0.69-1.11-0.69s-0.902,0.267-1.11,0.69L7.116,6.699L3.148,7.275c-0.466,0.068-0.854,0.394-1,0.842c-0.145,0.448-0.023,0.941,0.314,1.27l2.871,2.799l-0.677,3.951c-0.08,0.464,0.112,0.934,0.493,1.211c0.217,0.156,0.472,0.236,0.728,0.236c0.197,0,0.396-0.048,0.577-0.143l3.547-1.864l3.548,1.864c0.18,0.095,0.381,0.143,0.576,0.143c0.256,0,0.512-0.08,0.729-0.236c0.381-0.277,0.572-0.747,0.492-1.211l-0.678-3.951l2.871-2.799c0.338-0.329,0.459-0.821,0.314-1.27C17.705,7.669,17.316,7.343,16.85,7.275z M13.336,11.754l0.787,4.591l-4.124-2.167l-4.124,2.167l0.788-4.591L3.326,8.5l4.612-0.67l2.062-4.177l2.062,4.177l4.613,0.67L13.336,11.754z"></path>
+                            </svg>
+                          <span> Favorito</span>
+                        </li>
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M14.38,3.467l0.232-0.633c0.086-0.226-0.031-0.477-0.264-0.559c-0.229-0.081-0.48,0.033-0.562,0.262l-0.234,0.631C10.695,2.38,7.648,3.89,6.616,6.689l-1.447,3.93l-2.664,1.227c-0.354,0.166-0.337,0.672,0.035,0.805l4.811,1.729c-0.19,1.119,0.445,2.25,1.561,2.65c1.119,0.402,2.341-0.059,2.923-1.039l4.811,1.73c0,0.002,0.002,0.002,0.002,0.002c0.23,0.082,0.484-0.033,0.568-0.262c0.049-0.129,0.029-0.266-0.041-0.377l-1.219-2.586l1.447-3.932C18.435,7.768,17.085,4.676,14.38,3.467 M9.215,16.211c-0.658-0.234-1.054-0.869-1.014-1.523l2.784,0.998C10.588,16.215,9.871,16.447,9.215,16.211 M16.573,10.27l-1.51,4.1c-0.041,0.107-0.037,0.227,0.012,0.33l0.871,1.844l-4.184-1.506l-3.734-1.342l-4.185-1.504l1.864-0.857c0.104-0.049,0.188-0.139,0.229-0.248l1.51-4.098c0.916-2.487,3.708-3.773,6.222-2.868C16.187,5.024,17.489,7.783,16.573,10.27"></path>
+                            </svg>
+                            <span>Relembrar</span>
+                        </li>
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M16.557,4.467h-1.64v-0.82c0-0.225-0.183-0.41-0.409-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H5.901v-0.82c0-0.225-0.185-0.41-0.41-0.41c-0.226,0-0.41,0.185-0.41,0.41v0.82H3.442c-0.904,0-1.64,0.735-1.64,1.639v9.017c0,0.904,0.736,1.64,1.64,1.64h13.114c0.904,0,1.64-0.735,1.64-1.64V6.106C18.196,5.203,17.461,4.467,16.557,4.467 M17.377,15.123c0,0.453-0.366,0.819-0.82,0.819H3.442c-0.453,0-0.82-0.366-0.82-0.819V8.976h14.754V15.123z M17.377,8.156H2.623V6.106c0-0.453,0.367-0.82,0.82-0.82h1.639v1.23c0,0.225,0.184,0.41,0.41,0.41c0.225,0,0.41-0.185,0.41-0.41v-1.23h8.196v1.23c0,0.225,0.185,0.41,0.41,0.41c0.227,0,0.409-0.185,0.409-0.41v-1.23h1.64c0.454,0,0.82,0.367,0.82,0.82V8.156z"></path>
+                            </svg>
+                          <span>Agenda</span>
+                        </li>
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M17.592,8.936l-6.531-6.534c-0.593-0.631-0.751-0.245-0.751,0.056l0.002,2.999L5.427,9.075H2.491c-0.839,0-0.162,0.901-0.311,0.752l3.683,3.678l-3.081,3.108c-0.17,0.171-0.17,0.449,0,0.62c0.169,0.17,0.448,0.17,0.618,0l3.098-3.093l3.675,3.685c-0.099-0.099,0.773,0.474,0.773-0.296v-2.965l3.601-4.872l2.734-0.005C17.73,9.688,18.326,9.669,17.592,8.936 M3.534,9.904h1.906l4.659,4.66v1.906L3.534,9.904z M10.522,13.717L6.287,9.48l4.325-3.124l3.088,3.124L10.522,13.717z M14.335,8.845l-3.177-3.177V3.762l5.083,5.083H14.335z"></path>
+                            </svg>
+                          <span>Importante</span>
+                        </li>
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M18.344,16.174l-7.98-12.856c-0.172-0.288-0.586-0.288-0.758,0L1.627,16.217c0.339-0.543-0.603,0.668,0.384,0.682h15.991C18.893,16.891,18.167,15.961,18.344,16.174 M2.789,16.008l7.196-11.6l7.224,11.6H2.789z M10.455,7.552v3.561c0,0.244-0.199,0.445-0.443,0.445s-0.443-0.201-0.443-0.445V7.552c0-0.245,0.199-0.445,0.443-0.445S10.455,7.307,10.455,7.552M10.012,12.439c-0.733,0-1.33,0.6-1.33,1.336s0.597,1.336,1.33,1.336c0.734,0,1.33-0.6,1.33-1.336S10.746,12.439,10.012,12.439M10.012,14.221c-0.244,0-0.443-0.199-0.443-0.445c0-0.244,0.199-0.445,0.443-0.445s0.443,0.201,0.443,0.445C10.455,14.021,10.256,14.221,10.012,14.221"></path>
+                            </svg>
+                          <span>Spam</span>
+                        </li>
+                        <li class="item">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path fill="none" d="M16.471,5.962c-0.365-0.066-0.709,0.176-0.774,0.538l-1.843,10.217H6.096L4.255,6.5c-0.066-0.362-0.42-0.603-0.775-0.538C3.117,6.027,2.876,6.375,2.942,6.737l1.94,10.765c0.058,0.318,0.334,0.549,0.657,0.549h8.872c0.323,0,0.6-0.23,0.656-0.549l1.941-10.765C17.074,6.375,16.833,6.027,16.471,5.962z"></path>
+                                <path fill="none" d="M16.594,3.804H3.406c-0.369,0-0.667,0.298-0.667,0.667s0.299,0.667,0.667,0.667h13.188c0.369,0,0.667-0.298,0.667-0.667S16.963,3.804,16.594,3.804z"></path>
+                                <path fill="none" d="M9.25,3.284h1.501c0.368,0,0.667-0.298,0.667-0.667c0-0.369-0.299-0.667-0.667-0.667H9.25c-0.369,0-0.667,0.298-0.667,0.667C8.583,2.985,8.882,3.284,9.25,3.284z"></path>
+                            </svg>
+                          <span>Lixeira</span>
+                        </li>
+                        <div class="settings">
+                            <li class="item color-theme"> 
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path fill="none" d="M10,0.625c-5.178,0-9.375,4.197-9.375,9.375S4.822,19.375,10,19.375s9.375-4.197,9.375-9.375S15.178,0.625,10,0.625 M10,18.522V1.478c4.707,0,8.522,3.815,8.522,8.522S14.707,18.522,10,18.522"></path>
+                                </svg>
+                            </li>
+                            <li class="item settings-icon">
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path d="M17.498,11.697c-0.453-0.453-0.704-1.055-0.704-1.697c0-0.642,0.251-1.244,0.704-1.697c0.069-0.071,0.15-0.141,0.257-0.22c0.127-0.097,0.181-0.262,0.137-0.417c-0.164-0.558-0.388-1.093-0.662-1.597c-0.075-0.141-0.231-0.22-0.391-0.199c-0.13,0.02-0.238,0.027-0.336,0.027c-1.325,0-2.401-1.076-2.401-2.4c0-0.099,0.008-0.207,0.027-0.336c0.021-0.158-0.059-0.316-0.199-0.391c-0.503-0.274-1.039-0.498-1.597-0.662c-0.154-0.044-0.32,0.01-0.416,0.137c-0.079,0.106-0.148,0.188-0.22,0.257C11.244,2.956,10.643,3.207,10,3.207c-0.642,0-1.244-0.25-1.697-0.704c-0.071-0.069-0.141-0.15-0.22-0.257C7.987,2.119,7.821,2.065,7.667,2.109C7.109,2.275,6.571,2.497,6.07,2.771C5.929,2.846,5.85,3.004,5.871,3.162c0.02,0.129,0.027,0.237,0.027,0.336c0,1.325-1.076,2.4-2.401,2.4c-0.098,0-0.206-0.007-0.335-0.027C3.001,5.851,2.845,5.929,2.77,6.07C2.496,6.572,2.274,7.109,2.108,7.667c-0.044,0.154,0.01,0.32,0.137,0.417c0.106,0.079,0.187,0.148,0.256,0.22c0.938,0.936,0.938,2.458,0,3.394c-0.069,0.072-0.15,0.141-0.256,0.221c-0.127,0.096-0.181,0.262-0.137,0.416c0.166,0.557,0.388,1.096,0.662,1.596c0.075,0.143,0.231,0.221,0.392,0.199c0.129-0.02,0.237-0.027,0.335-0.027c1.325,0,2.401,1.076,2.401,2.402c0,0.098-0.007,0.205-0.027,0.334C5.85,16.996,5.929,17.154,6.07,17.23c0.501,0.273,1.04,0.496,1.597,0.66c0.154,0.047,0.32-0.008,0.417-0.137c0.079-0.105,0.148-0.186,0.22-0.256c0.454-0.453,1.055-0.703,1.697-0.703c0.643,0,1.244,0.25,1.697,0.703c0.071,0.07,0.141,0.15,0.22,0.256c0.073,0.098,0.188,0.152,0.307,0.152c0.036,0,0.073-0.004,0.109-0.016c0.558-0.164,1.096-0.387,1.597-0.66c0.141-0.076,0.22-0.234,0.199-0.393c-0.02-0.129-0.027-0.236-0.027-0.334c0-1.326,1.076-2.402,2.401-2.402c0.098,0,0.206,0.008,0.336,0.027c0.159,0.021,0.315-0.057,0.391-0.199c0.274-0.5,0.496-1.039,0.662-1.596c0.044-0.154-0.01-0.32-0.137-0.416C17.648,11.838,17.567,11.77,17.498,11.697 M16.671,13.334c-0.059-0.002-0.114-0.002-0.168-0.002c-1.749,0-3.173,1.422-3.173,3.172c0,0.053,0.002,0.109,0.004,0.166c-0.312,0.158-0.64,0.295-0.976,0.406c-0.039-0.045-0.077-0.086-0.115-0.123c-0.601-0.6-1.396-0.93-2.243-0.93s-1.643,0.33-2.243,0.93c-0.039,0.037-0.077,0.078-0.116,0.123c-0.336-0.111-0.664-0.248-0.976-0.406c0.002-0.057,0.004-0.113,0.004-0.166c0-1.75-1.423-3.172-3.172-3.172c-0.054,0-0.11,0-0.168,0.002c-0.158-0.312-0.293-0.639-0.405-0.975c0.044-0.039,0.085-0.078,0.124-0.115c1.236-1.236,1.236-3.25,0-4.486C3.009,7.719,2.969,7.68,2.924,7.642c0.112-0.336,0.247-0.664,0.405-0.976C3.387,6.668,3.443,6.67,3.497,6.67c1.75,0,3.172-1.423,3.172-3.172c0-0.054-0.002-0.11-0.004-0.168c0.312-0.158,0.64-0.293,0.976-0.405C7.68,2.969,7.719,3.01,7.757,3.048c0.6,0.6,1.396,0.93,2.243,0.93s1.643-0.33,2.243-0.93c0.038-0.039,0.076-0.079,0.115-0.123c0.336,0.112,0.663,0.247,0.976,0.405c-0.002,0.058-0.004,0.114-0.004,0.168c0,1.749,1.424,3.172,3.173,3.172c0.054,0,0.109-0.002,0.168-0.004c0.158,0.312,0.293,0.64,0.405,0.976c-0.045,0.038-0.086,0.077-0.124,0.116c-0.6,0.6-0.93,1.396-0.93,2.242c0,0.847,0.33,1.645,0.93,2.244c0.038,0.037,0.079,0.076,0.124,0.115C16.964,12.695,16.829,13.021,16.671,13.334 M10,5.417c-2.528,0-4.584,2.056-4.584,4.583c0,2.529,2.056,4.584,4.584,4.584s4.584-2.055,4.584-4.584C14.584,7.472,12.528,5.417,10,5.417 M10,13.812c-2.102,0-3.812-1.709-3.812-3.812c0-2.102,1.71-3.812,3.812-3.812c2.102,0,3.812,1.71,3.812,3.812C13.812,12.104,12.102,13.812,10,13.812"></path>
+                                </svg>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="middle-tab">
+                            <div class="profile-header">
+                                <img src="images/contact/profile-photo.jpg">
+                            </div>
+                        <div class="contactProfile-page">
+                            <h2>Pedro Felipe</h2>
+                            <span class="online-status">Online</span>
+                            <div class="bio">
+                                <span> Web Developer & Designer <br>Universidade Federal do Rio Grande do Norte <br>Natal - RN</span>
+                            </div>
+                            <div class="contato-card-social">
+                                <a href="https://www.facebook.com/peedro.felipe.31" title="Facebook" target="_blank"><i class="fab fa-facebook-f facebook"></i></a>
+                                <a href="https://www.instagram.com/_pedroflp" title="Instagram" target="_blank"><i class="fab fa-instagram instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5584986215801" title="Whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp"></i></a>
+                                <a href="https://twitter.com/pedroflp" title="Twitter" target="_blank"><i class="fab fa-twitter twitter"></i></a>
+                                <a href="https://github.com/pedroflp" title="GitHub" target="_blank"><i class="fab fa-github github"></i></a>
+                                <a href="https://www.linkedin.com/in/pedroflp/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a>
+                                <a href="https://dribbble.com/pedroflp" target="_blank" title="Dribbble"><i class="fab fa-dribbble dribbble"></i></a>
+                                <a href="https://codepen.io/pedroflp" target="_blank" title="Codepen"><i class="fab fa-codepen codepen"></i></a>
+                            <div class="buttons">
+                                <button class="openMsg" onclick="openModalMsg()">Enviar mensagem</button>
+
+                                <div id="msgModal" class="modal">
+                                    <div class="modal-content">
+
+                                        <div class="modalSubmited" id="modalSubmited" style="display: none">
+                                            <div class="modalSubmited-content">
+                                                <div class="submitedMsg">
+                                                    <p>Obrigado <strong style="text-transform: capitalize;" id="name-span"></strong>! Sua mensagem foi enviada.</p>
+                                                    <i class="far fa-check-circle checked"></i>
+        
+                                                    <div class="reloading">
+                                                        <span>Página recarregando...</span>
+                                                        <i class="fas fa-sync-alt"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form" id="form-container">
+                                            <span onclick="document.getElementById('msgModal').style.display='none';" class="button display-topright form-content" style="cursor: pointer; margin: 10px; color: #6c63ff; font-size: 25px;">&times;</span>
+                                            <input type="text" id="name-form" placeholder="Nome" minlength="3" maxlength="40" title="Preencha seu nome completo!" class="form-content">
+                                            <input type="email" id="email-form" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Preencha com um email válido!" class="form-content">
+                                            <div class="textarea">
+                                                <textarea placeholder="Mensagem" id="message-form" cols="60" rows="7" title="Digite sua mensagem aqui!" id="field" onkeyup="countChar(this)" maxlength="250" class="form-content"></textarea>
+                                                <textarea type="number" id="charNum" class="form-content" disabled>250</textarea>
+                                            </div>
+                                            <button class="submitBtn" id="submitBtn" onclick="submitForm()" disabled="disabled">Enviar</button>
+                                        </div>                                       
+                                    </div>
+                                  </div>
+                                
+                                <div class="buttons-reactions">
+                                    <svg class="svg-icon" viewBox="0 0 20 20">
+                                        <path d="M14.68,12.621c-0.9,0-1.702,0.43-2.216,1.09l-4.549-2.637c0.284-0.691,0.284-1.457,0-2.146l4.549-2.638c0.514,0.661,1.315,1.09,2.216,1.09c1.549,0,2.809-1.26,2.809-2.808c0-1.548-1.26-2.809-2.809-2.809c-1.548,0-2.808,1.26-2.808,2.809c0,0.38,0.076,0.741,0.214,1.073l-4.55,2.638c-0.515-0.661-1.316-1.09-2.217-1.09c-1.548,0-2.808,1.26-2.808,2.809s1.26,2.808,2.808,2.808c0.9,0,1.702-0.43,2.217-1.09l4.55,2.637c-0.138,0.332-0.214,0.693-0.214,1.074c0,1.549,1.26,2.809,2.808,2.809c1.549,0,2.809-1.26,2.809-2.809S16.229,12.621,14.68,12.621M14.68,2.512c1.136,0,2.06,0.923,2.06,2.06S15.815,6.63,14.68,6.63s-2.059-0.923-2.059-2.059S13.544,2.512,14.68,2.512M5.319,12.061c-1.136,0-2.06-0.924-2.06-2.06s0.923-2.059,2.06-2.059c1.135,0,2.06,0.923,2.06,2.059S6.454,12.061,5.319,12.061M14.68,17.488c-1.136,0-2.059-0.922-2.059-2.059s0.923-2.061,2.059-2.061s2.06,0.924,2.06,2.061S15.815,17.488,14.68,17.488"></path>
+                                    </svg>
+                                    <svg class="svg-icon like" viewBox="0 0 20 20">
+                                        <path d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
+                                    </svg>
+                                    <svg class="svg-icon" viewBox="0 0 20 20">
+                                        <path d="M16.76,7.51l-5.199-5.196c-0.234-0.239-0.633-0.066-0.633,0.261v2.534c-0.267-0.035-0.575-0.063-0.881-0.063c-3.813,0-6.915,3.042-6.915,6.783c0,2.516,1.394,4.729,3.729,5.924c0.367,0.189,0.71-0.266,0.451-0.572c-0.678-0.793-1.008-1.645-1.008-2.602c0-2.348,1.93-4.258,4.303-4.258c0.108,0,0.215,0.003,0.321,0.011v2.634c0,0.326,0.398,0.5,0.633,0.262l5.199-5.193C16.906,7.891,16.906,7.652,16.76,7.51 M11.672,12.068V9.995c0-0.185-0.137-0.341-0.318-0.367c-0.219-0.032-0.49-0.05-0.747-0.05c-2.78,0-5.046,2.241-5.046,5c0,0.557,0.099,1.092,0.292,1.602c-1.261-1.111-1.979-2.656-1.979-4.352c0-3.331,2.77-6.041,6.172-6.041c0.438,0,0.886,0.067,1.184,0.123c0.231,0.043,0.441-0.134,0.441-0.366V3.472l4.301,4.3L11.672,12.068z"></path>
+                                    </svg>
+                                </div>
+                            </div> 
+                            </div>                       
+                    </div>
+                    </div>
+                    <div class="right-tab">
+                        <div class="messagesReceived" style="margin-bottom: 30%;" title="Messagens">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M17.211,3.39H2.788c-0.22,0-0.4,0.18-0.4,0.4v9.614c0,0.221,0.181,0.402,0.4,0.402h3.206v2.402c0,0.363,0.429,0.533,0.683,0.285l2.72-2.688h7.814c0.221,0,0.401-0.182,0.401-0.402V3.79C17.612,3.569,17.432,3.39,17.211,3.39M16.811,13.004H9.232c-0.106,0-0.206,0.043-0.282,0.117L6.795,15.25v-1.846c0-0.219-0.18-0.4-0.401-0.4H3.189V4.19h13.622V13.004z"></path>
+                            </svg>
+                            <span style="background: red; cursor: default; padding: 3px 5px; border-radius: 2px; color: white; font-size: 11px; margin-left: 30%;">238</span>
+                        </div>
+                        <div class="Contacts" title="Contatos" style="margin-bottom: 900%;">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path d="M15.573,11.624c0.568-0.478,0.947-1.219,0.947-2.019c0-1.37-1.108-2.569-2.371-2.569s-2.371,1.2-2.371,2.569c0,0.8,0.379,1.542,0.946,2.019c-0.253,0.089-0.496,0.2-0.728,0.332c-0.743-0.898-1.745-1.573-2.891-1.911c0.877-0.61,1.486-1.666,1.486-2.812c0-1.79-1.479-3.359-3.162-3.359S4.269,5.443,4.269,7.233c0,1.146,0.608,2.202,1.486,2.812c-2.454,0.725-4.252,2.998-4.252,5.685c0,0.218,0.178,0.396,0.395,0.396h16.203c0.218,0,0.396-0.178,0.396-0.396C18.497,13.831,17.273,12.216,15.573,11.624 M12.568,9.605c0-0.822,0.689-1.779,1.581-1.779s1.58,0.957,1.58,1.779s-0.688,1.779-1.58,1.779S12.568,10.427,12.568,9.605 M5.06,7.233c0-1.213,1.014-2.569,2.371-2.569c1.358,0,2.371,1.355,2.371,2.569S8.789,9.802,7.431,9.802C6.073,9.802,5.06,8.447,5.06,7.233 M2.309,15.335c0.202-2.649,2.423-4.742,5.122-4.742s4.921,2.093,5.122,4.742H2.309z M13.346,15.335c-0.067-0.997-0.382-1.928-0.882-2.732c0.502-0.271,1.075-0.429,1.686-0.429c1.828,0,3.338,1.385,3.535,3.161H13.346z"></path>
+                            </svg>
+                        </div>
+                        <div class="updateRelease" title="Atualização Disponível">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path fill="none" d="M15.608,6.262h-2.338v0.935h2.338c0.516,0,0.934,0.418,0.934,0.935v8.879c0,0.517-0.418,0.935-0.934,0.935H4.392c-0.516,0-0.935-0.418-0.935-0.935V8.131c0-0.516,0.419-0.935,0.935-0.935h2.336V6.262H4.392c-1.032,0-1.869,0.837-1.869,1.869v8.879c0,1.031,0.837,1.869,1.869,1.869h11.216c1.031,0,1.869-0.838,1.869-1.869V8.131C17.478,7.099,16.64,6.262,15.608,6.262z M9.513,11.973c0.017,0.082,0.047,0.162,0.109,0.226c0.104,0.106,0.243,0.143,0.378,0.126c0.135,0.017,0.274-0.02,0.377-0.126c0.064-0.065,0.097-0.147,0.115-0.231l1.708-1.751c0.178-0.183,0.178-0.479,0-0.662c-0.178-0.182-0.467-0.182-0.645,0l-1.101,1.129V1.588c0-0.258-0.204-0.467-0.456-0.467c-0.252,0-0.456,0.209-0.456,0.467v9.094L8.443,9.553c-0.178-0.182-0.467-0.182-0.645,0c-0.178,0.184-0.178,0.479,0,0.662L9.513,11.973z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-content-left" data-aos="fade-right">
+                    <div class="footer-info">
+                        <div class="footer-info-copyright" style="display: inline-flexbox;">
+                            <img src="images/home/p_logo.png" title="Pedro Felipe"><img src="images/footer/eject-icon.png" alt="Eject Logo" title="Eject">
+                            <h1><strong>ProSEmpre</strong> - EJECT © 2020<br> <span style="color: #918ddb;">Todos os direitos reservados</span></h1>                       
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#navbar">Início</a>
+                                <a href="#habilities">Habilidades</a>
+                                <a href="#contact">Contatos</a>
+                                <li class="eject-link-footer" style="border-left: 1px solid #7770fd; list-style: none; padding-left: 7%;">
+                                    <a href="https://pedroflp.github.io/EJECT" title="ProSempre - Eject 2019.2" target="_blank"><i class="fas fa-eject"></i> Eject 2019.2</a>
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-content-right" data-aos="fade-left">
+                    <div class="footer-social">
+                        <a href="#navbar" title="Voltar para o início" class="top-button"><i class="fas fa-angle-up"></i></a>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/peedro.felipe.31" title="Facebook" target="_blank"><i class="fab fa-facebook-f facebook"></i></a>
+                            <a href="https://www.instagram.com/_pedroflp" title="Instagram" target="_blank"><i class="fab fa-instagram instagram"></i></a>
+                            <a href="https://twitter.com/pedroflp" title="Twitter" target="_blank"><i class="fab fa-twitter twitter"></i></a>
+                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5584986215801" title="Whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp"></i></a>                   
+                            <a href="https://www.linkedin.com/in/pedroflp/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in linkedin"></i></a>
+                            <a href="https://github.com/pedroflp" title="GitHub" target="_blank"><i class="fab fa-github github"></i></a>
+                            <a href="https://dribbble.com/pedroflp" target="_blank" title="Dribbble"><i class="fab fa-dribbble dribbble"></i></a>
+                            <a href="https://codepen.io/pedroflp" target="_blank" title="Codepen"><i class="fab fa-codepen codepen"></i></a>    
+                        </div>  
+                    </div>
+                    <div class="developed">
+                        <span>Developed with <i class="fas fa-heart" style="color: rgb(255, 255, 255);"></i> by Pedro Felipe</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- // Script Codes -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Animations -->
+<script>
+    AOS.init();
+</script>
+
+<!-- Slider -->
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 1010,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            },
+
+        }],
+    });
+});
+</script>
+
+<!-- TextArea Caracters Count -->
+<script>
+    function countChar(val) {
+      var len = val.value.length;
+      if (len >= 500) {
+        val.value = val.value.substring(0, 500);
+      } else {
+        $('#charNum').text(250 - len);
+      }
+    };
+  </script>
+
+<!-- Modal Message -->
+<script>
+    function openModalMsg(){
+    var modal = document.getElementById('msgModal');
+    
+    modal.style.display = "block";
+    modal.classList.add('opacityTAnimation');
+
+    }
+</script>
+
+<script>
+    $(document).ready(function() {
+  $('.form input').on('keyup', function() {
+    let empty = false;
+
+    $('.form input').each(function() {
+      noempty = $(this).val().length > 0;
+    });
+
+    if (noempty)
+    $('.submitBtn').attr('disabled', false),
+      $('.submitBtn').attr('style', "background: #6c63ff");
+    else
+    $('.submitBtn').attr('disabled', 'disabled'),
+    $('.submitBtn').removeAttr('style');
+  });
+});
+
+</script>
+
+<script>
+    function submitForm(){
+        var modalSub = document.getElementById('modalSubmited');
+        modalSub.classList.add('opacityLAnimation')
+        modalSub.style.display = "block";
+
+        var name = document.getElementById('name-form').value;
+        document.getElementById('name-span').innerHTML = name;
+        
+        setTimeout(function() {
+            location = ''
+        }, 6000)
+        
+    }
+</script>
+
+</body>
+</html>
