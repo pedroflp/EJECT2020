@@ -748,13 +748,13 @@
     display: inline;
     clear: left;
     margin-left: 2%;
+    font-family: 'DM Sans', sans-serif;
 }
 .footer-info ul li a{
     margin-right: 4%;
     color: #9f9ce9;
     transition: 0.2s;
     text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
 }   
 .footer-info ul li a:hover{
     color: #7ff9ae;
