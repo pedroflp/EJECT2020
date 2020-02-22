@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=700px">
+    <meta name="viewport" content="width=600px">
     <title>Pedro Felipe | EJECT</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/home/p_logo.png">
@@ -253,11 +253,10 @@
                                             <div class="modalSubmited-content">
                                                 <div class="submitedMsg">
                                                     <p>Obrigado <strong style="text-transform: capitalize;" id="name-span"></strong>! Sua mensagem foi enviada.</p>
-                                                    <i class="far fa-check-circle checked"></i>
         
                                                     <div class="reloading">
                                                         <span>Página recarregando...</span>
-                                                        <i class="fas fa-sync-alt"></i>
+            
                                                     </div>
                                                 </div>
                                             </div>
@@ -265,16 +264,19 @@
 
                                         <div class="form" id="form-container">
                                             <span onclick="document.getElementById('msgModal').style.display='none';" class="button display-topright form-content" style="cursor: pointer; margin: 10px; color: #6c63ff; font-size: 25px;">&times;</span>
-                                            <input type="text" id="name-form" placeholder="Nome" minlength="3" maxlength="40" title="Preencha seu nome completo!" class="form-content">
-                                            <input type="email" id="email-form" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Preencha com um email válido!" class="form-content">
+                                            <form>
+                                                <input type="text" id="name-form" placeholder="Nome" minlength="3" maxlength="40" title="Preencha seu nome completo!" class="form-content">
+                                            <input type="email" id="email-form" placeholder="Email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Preencha com um email válido!" class="form-content">
                                             <div class="textarea">
-                                                <textarea placeholder="Mensagem" id="message-form" cols="60" rows="7" title="Digite sua mensagem aqui!" id="field" onkeyup="countChar(this)" maxlength="250" class="form-content"></textarea>
-                                                <textarea type="number" id="charNum" class="form-content" disabled>250</textarea>
+                                                <textarea placeholder="Mensagem" id="message-form" cols="60" rows="7" title="Digite sua mensagem aqui!" id="field" onkeyup="countChar(this)" maxlength="200" class="form-content"></textarea>
+                                                <textarea type="number" id="charNum" class="form-content" disabled>200</textarea>
                                             </div>
                                             <button class="submitBtn" id="submitBtn" onclick="submitForm()" disabled="disabled">Enviar</button>
-                                        </div>                                       
+                                            </form>
+                                            </div>
+
                                     </div>
-                                  </div>
+                                </div>
                                 
                                 <div class="buttons-reactions">
                                     <svg class="svg-icon" viewBox="0 0 20 20">
@@ -363,7 +365,6 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Animations -->
@@ -408,7 +409,7 @@ $(document).ready(function(){
       if (len >= 500) {
         val.value = val.value.substring(0, 500);
       } else {
-        $('#charNum').text(250 - len);
+        $('#charNum').text(200 - len);
       }
     };
   </script>
@@ -447,15 +448,16 @@ $(document).ready(function(){
 <script>
     function submitForm(){
         var modalSub = document.getElementById('modalSubmited');
-        modalSub.classList.add('opacityLAnimation')
+        modalSub.classList.add('opacityLAnimation');
         modalSub.style.display = "block";
+        document.getElementById('form-container').style.display = 'none';
 
         var name = document.getElementById('name-form').value;
         document.getElementById('name-span').innerHTML = name;
         
         setTimeout(function() {
             location = ''
-        }, 6000)
+        }, 5000)
         
     }
 </script>
