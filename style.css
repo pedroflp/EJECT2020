@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -483,6 +484,7 @@
     width: 70%;
 }
 .contato-card-social i{
+    text-align: center;
     font-size: 25px;
     margin: 15px 5px 15px auto;
     transition: 0.3s;
@@ -583,8 +585,8 @@
 }
 .modal-content textarea[type="number"]{
     background: none!important;
-    margin-left: -15%;
-    width: 60px;
+    margin-left: -17%;
+    width: 70px;
     height: 40px;
     font-family: "DM Sans", sans-serif;
     color: #6c63ff!important;
@@ -614,7 +616,6 @@
     margin: 10% auto;
     border: none;
     transition: 1s;
-    transform: translateX(-5%);
 }
 .submitedMsg-content{
     width: 70%;
@@ -624,30 +625,18 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 25px;
     text-align: center;
-}
-.checked{
-    font-size: 150px!important;
-    margin: auto;
-    color: #7ff9ae;
-    width: 100%;
-}
-.checked:hover{
-    transform: translateY(0)!important;
+    margin-bottom: 50px;
 }
 .reloading{
-    width: 100%;
+    width: 60%;
     margin: auto;
     text-align: center;
-    color: #8d8d8d;
+    color: rgb(168, 168, 168);
 }
 .reloading span{
-    margin: auto;
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-}
-.reloading i{
-    font-size: 15px;
-    animation: rotate 10s infinite;
+    text-align: center;
 }
 
 .opacityLAnimation{
@@ -813,6 +802,7 @@
     .contato-card-social{
         width: 100%;
     }
+    
 }
 @media screen and (max-width: 1020px){
     .eject-link{
@@ -856,7 +846,7 @@
         display: none;
     }
     .openMsg{
-        width: 200px;
+        display: none;
     }
     .contato-card-social{
         width: 80%;
@@ -1023,7 +1013,7 @@
         opacity: 0;
     }
     100%{
-        transform: translateX(-5%);
+        transform: translateX(0%);
         margin: 10% auto;
         opacity: 1;
     }
